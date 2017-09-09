@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -eu
+#set -eu
 USER=$1
 PASS=$2
 MESSAGE=$3
@@ -12,7 +12,7 @@ $USER:$PASS
 EOF
 mkdir /home/$USER
 echo -e "$MESSAGE\n" > /home/${USER}/hello.txt
-cp ~/.bash_profile /home/$USER/
+cp user_profile /home/$USER/.bash_profile
 chown -R $USER /home/$USER
 chsh -s /bin/bash $USER
 usermod -g student $USER; 
