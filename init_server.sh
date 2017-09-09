@@ -10,4 +10,6 @@ mkdir -p ${HOME}/.ssh
 cp authorized_keys ${HOME}/.ssh/authorized_keys
 
 # install-common
-apt install vim build-essential git cowsay
+apt update
+apt upgrade -y
+apt install -y vim build-essential git cowsay screen tmux zip unzip nano
