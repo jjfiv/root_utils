@@ -9,3 +9,5 @@ groupadd student
 mkdir -p ${HOME}/.ssh
 cp authorized_keys ${HOME}/.ssh/authorized_keys
 
+# install-common
+apt install vim build-essential git cowsay
