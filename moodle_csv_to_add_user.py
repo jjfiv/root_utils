@@ -24,8 +24,8 @@ for item in rows:
         continue
     num = int(item['ID number'])
     username = email.split('@')[0]
-    #if os.path.exists("/home/%s" % (username)):
-        #continue
+    if os.path.exists("/home/%s" % (username)):
+        continue
 
     four_words = ' '.join(random.sample(dictionary, 4))
     print('./add_user.sh %s %d "%s"' % (username, num, four_words))

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#set -eu
+set -u
 USER=$1
 PASS=$2
 MESSAGE=$3

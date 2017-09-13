@@ -1,0 +1,12 @@
+#!/bin/bash
+set -u
+
+# copy argument script to /tmp/do.sh.
+cp $1 /tmp/do.sh
+chmod +x /tmp/do.sh
+
+# log in as each user one at a time to execute this script.
+for user in $(ls /home); do
+  echo $user
+  su $user -c "/tmp/do.sh"
+done
