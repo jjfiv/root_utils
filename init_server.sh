@@ -15,7 +15,7 @@ cp authorized_keys ${HOME}/.ssh/authorized_keys
 # install-common
 apt update
 apt upgrade -y
-apt install -y vim build-essential git cowsay screen tmux zip unzip nano
+apt install -y vim build-essential git cowsay screen tmux zip unzip nano mosh
 
 # config git names
 git config --global user.name "John Foley"
