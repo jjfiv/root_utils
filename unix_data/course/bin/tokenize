@@ -1,0 +1,10 @@
+#!/usr/bin/env python
+import fileinput
+import string
+
+replace_punct = string.maketrans(string.punctuation, ' '*len(string.punctuation))
+
+for line in fileinput.input():
+  words = line.translate(replace_punct).strip().lower().split()
+  for word in words:
+    print(word)

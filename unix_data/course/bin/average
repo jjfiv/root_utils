@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -e -u
+
+awk '{x+=$1} END{print x/NR}'
+

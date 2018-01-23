@@ -1,0 +1,15 @@
+#!/usr/bin/python2
+
+import fileinput
+
+data = sorted([line.rstrip() for line in fileinput.input()])
+
+hist = {}
+for x in data:
+  if x not in hist:
+    hist[x] = 0;
+  hist[x]+=1;
+
+for k,amt in hist.iteritems():
+  print(k+"\t"+str(amt));
+

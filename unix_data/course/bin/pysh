@@ -1,0 +1,17 @@
+#!/usr/bin/env python
+import shlex, sys
+
+while True:
+  command = raw_input('pysh$ ');
+  parts = shlex.split(command)
+  if len(parts) == 0:
+    continue
+  elif parts[0] == 'exit':
+    if len(parts) >= 2:
+      sys.exit(int(parts[1]))
+    else:
+      sys.exit(0)
+  elif parts[0] == 'echo':
+    print(' '.join(parts[1:]))
+  else:
+    print("Unknown command: "+parts[0])

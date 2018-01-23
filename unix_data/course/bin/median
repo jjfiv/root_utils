@@ -1,0 +1,15 @@
+#!/usr/bin/python2
+
+import fileinput
+
+data = sorted([float(line.rstrip()) for line in fileinput.input()])
+
+size = len(data)
+half = int(size/2)
+
+result = data[half]
+if size % 2 == 0:
+  result = (data[half] + data[half+1]) / 2
+
+print(result)
+

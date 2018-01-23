@@ -1,0 +1,35 @@
+#!/usr/bin/python2
+
+import sys
+
+args = sys.argv[1:]
+
+start = int(args[0])
+end = int(args[1])
+step = int(args[2])
+
+dividers = sorted(xrange(start, end, step))
+
+hist = {}
+for x in sys.stdin.readlines():
+  pt = float(x)
+  target_bin = "other"
+  if pt < dividers[0]:
+    target_bin = "less"
+  elif pt > dividers[-1]:
+    target_bin = "more"
+
+  for i in xrange(0, len(dividers)-1):
+    bottom = dividers[i]
+    top = dividers[i+1]
+    if pt >= bottom and pt < top:
+      #target_bin = "%f -> %f" % (bottom, top)
+      target_bin = "%f" % (bottom)
+      break
+  if target_bin not in hist:
+    hist[target_bin] = 0
+  hist[target_bin] += 1
+  
+for k in sorted(hist.iterkeys()):
+  print(str(k)+"\t"+str(hist[k]));
+

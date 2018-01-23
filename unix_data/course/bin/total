@@ -1,0 +1,6 @@
+#!/usr/bin/python2
+
+import fileinput
+
+print(sum([float(line.rstrip()) for line in fileinput.input()]))
+

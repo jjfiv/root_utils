@@ -1,0 +1,5 @@
+#!/bin/bash
+
+set -e -u
+
+awk '{if($1) x+=1} END {print x}'

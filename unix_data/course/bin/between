@@ -1,0 +1,17 @@
+#!/usr/bin/python2
+
+import sys
+
+args = sys.argv[1:]
+
+starts = args[0]
+ends = args[1]
+
+for line in sys.stdin.readlines():
+  begin = line.index(starts)
+  end = line.index(ends, begin)
+  if begin == -1 or end == -1:
+    continue;
+
+  print(line[begin+len(starts):end])
+
