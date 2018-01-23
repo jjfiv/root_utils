@@ -20,3 +20,4 @@ apt install -y vim build-essential git cowsay screen tmux zip unzip nano mosh
 # config git names
 git config --global user.name "John Foley"
 git config --global user.email "jfoley@cs.umass.edu"
+git config --gloabl core.editor vim
