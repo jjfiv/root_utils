@@ -1,5 +1,8 @@
 #!/bin/bash
 
+## Ubuntu tip:
+# because UMass Ids are not considered good passwords (duh), you must run pam-auth-update and disable checks before running this script.
+
 set -u
 USER=$1
 PASS=$2
