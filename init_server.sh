@@ -15,7 +15,10 @@ cp authorized_keys ${HOME}/.ssh/authorized_keys
 # install-common
 apt update
 apt upgrade -y
-apt install -y vim build-essential git cowsay screen tmux zip unzip nano mosh python
+apt install -y vim build-essential git cowsay screen tmux zip unzip nano mosh python python-pip
+
+# install needed dependency for 'stripxml' /course/bin/stripxml
+pip install beautifulsoup4
 
 # config git names
 git config --global user.name "John Foley"
